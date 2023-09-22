@@ -1,0 +1,21 @@
+<form (submit)="onSubmit()" #movieForm = "ngForm">
+  <mat-form-field>
+      <input matInput placeholder="Name" name="name" [(ngModel)]="movieData.name" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Photo" name="photo" [(ngModel)]="movieData.photo" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Duration" name="duration" [(ngModel)]="movieData.duration" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Genre" name="genre" [(ngModel)]="movieData.genre" required>
+    </mat-form-field>
+    <br>  
+    
+    <button mat-raised-button color="primary">Add</button>
+   
+</form> 

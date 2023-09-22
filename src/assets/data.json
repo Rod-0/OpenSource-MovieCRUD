@@ -1,0 +1,53 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "name": "Cacería en Venecia",
+      "photo": "https://www.uniminutoradio.com.co/wp-content/uploads/2023/09/ae688735bf3b-banner_movil_800x600.jpg",
+      "duration": "1h 50m",
+      "genre": "Misterio"
+    },
+    {
+      "id": 2,
+      "name": "Blue Beetle",
+      "photo": "https://m.media-amazon.com/images/M/MV5BODkyZjcyOGMtZWVhYy00ZWEyLWJlZDItZDA2OTBhNGZmMjBiXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      "duration": "2h 10m",
+      "genre": "Acción"
+    },
+    {
+      "id": 3,
+      "name": "Cachorros Espaciales",
+      "photo": "https://eng.cineplexusa.com/wp-content/uploads/2023/07/Poster-web-CPX.jpg",
+      "duration": "1h 40m",
+      "genre": "Familiar"
+    },
+    {
+      "id": 4,
+      "name": "Elementos",
+      "photo": "https://images.justwatch.com/poster/306310749/s718/untitled-pixar-animation-project-3.jpg",
+      "duration": "1h 50m",
+      "genre": "Animación"
+    },
+    {
+      "id": 6,
+      "name": "Háblame",
+      "photo": "https://megustaelcine.com/wp-content/uploads/2023/07/POSTER-Hablame.jpeg",
+      "duration": "1h 40m",
+      "genre": "Terror"
+    },
+    {
+      "photo": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+      "name": "Batman VS Superman",
+      "duration": "2h 31m",
+      "genre": "accion",
+      "id": 7
+    },
+    {
+      "name": "Superman el Hombre de Acero",
+      "photo": "https://es.web.img3.acsta.net/pictures/15/11/20/13/14/031438.jpg",
+      "duration": "2h 23m",
+      "genre": "Accion",
+      "id": 8
+    }
+  ]
+}
