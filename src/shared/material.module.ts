@@ -9,6 +9,7 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     imports: [
@@ -21,7 +22,8 @@ import { MatSelectModule } from '@angular/material/select';
       MatPaginatorModule,
       MatFormFieldModule,
       MatButtonToggleModule,
-      MatSelectModule
+      MatSelectModule,
+      MatCardModule
 
     ],
     exports: [
@@ -34,7 +36,8 @@ import { MatSelectModule } from '@angular/material/select';
       MatPaginatorModule,
       MatFormFieldModule,
       MatButtonToggleModule,
-      MatSelectModule
+      MatSelectModule,
+      MatCardModule
     ]
   })
   export class MaterialModule { }
