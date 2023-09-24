@@ -1,5 +1,5 @@
 import { Movie } from '../../models/movie.model';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { NgForm } from '@angular/forms';
@@ -66,7 +66,7 @@ export class MovieTableComponent {
   }
   //delete
   deleteItem(id:any){
-    this.httpDataService.deleteItem(id).subscribe((response:any)=>{
+    this.httpDataService.deleteItem(id).subscribe(()=>{
       this.dataSource.data = this.dataSource.data.filter((o:any)=>{
         return o.id !== id ? o: false;
       })
