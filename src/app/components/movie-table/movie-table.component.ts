@@ -7,6 +7,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { HttpDataService } from '../../services/http-data.service';
 import { Router } from '@angular/router';
 import * as _ from "lodash";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-movie-table',
@@ -22,19 +23,19 @@ export class MovieTableComponent {
   displayedColumns: string[] = ['id', 'name', 'photo', 'duration', 'genre', 'actions'];
   isEditMode = false;
 
-  constructor(private httpDataService: HttpDataService,private router: Router){
+  constructor(private httpDataService: HttpDataService,private router: Router, private _snackBar: MatSnackBar){
     this.movieData = {} as Movie;
   }
 
   @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatPaginator, {static: true}) 
+  @ViewChild(MatPaginator, {static: true})
   paginator!: MatPaginator;
-  
+
   ngOnInit(): void{
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
     this.getAllMovies();
-  } 
+  }
 
   getAllMovies(){
     this.httpDataService.getListMovie().subscribe((response: any) =>{
@@ -42,7 +43,7 @@ export class MovieTableComponent {
       console.log(this.dataSource.data);
     })
   }
-  
+
   onSubmit() {
     if(this.movieForm.form.valid){
       console.log('valid');
@@ -53,7 +54,7 @@ export class MovieTableComponent {
         this.addMovie();
       }
       this.cancelEdit();
-  
+
     }else{
       console.log('invalid');
     }
@@ -70,6 +71,11 @@ export class MovieTableComponent {
         return o.id !== id ? o: false;
       })
     })
+    this._snackBar.open('Movie Deleted', 'Close', {
+      duration: 2000,
+
+    });
+
   }
 
   //add
@@ -103,5 +109,7 @@ export class MovieTableComponent {
   new(){
     this.router.navigateByUrl('/newMovie');
   }
+
+
 
 }
